@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/load"
     android:visibility="gone"
-    android:background="@drawable/bg_set"
+    android:background="@drawable/bg_screen_gradient"
     android:fitsSystemWindows="true">
 
 
@@ -30,14 +30,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:indicatorColor="#4DCDFF"
+            app:indicatorColor="@color/brand_primary"
             app:indicatorInset="0dp"
             app:indicatorSize="164dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:trackColor="#D9EFFA"
+            app:trackColor="@color/brand_primary_soft"
             app:trackThickness="10dp"
             tools:progress="40" />
 
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cleaning…"
-            android:textColor="#FF728391"
+            android:textColor="@color/text_secondary"
             android:textSize="18sp"
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"

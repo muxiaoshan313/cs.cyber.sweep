@@ -5,7 +5,9 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimaryContainer">@color/brand_primary_dark</item>
         <item name="colorSecondary">@color/brand_accent</item>
-        <item name="android:windowBackground">@color/screen_bg</item>
+        <item name="android:windowBackground">@drawable/bg_screen_gradient</item>
+        <item name="android:navigationBarColor">@color/screen_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
