@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screen_bg"
+    android:background="@drawable/bg_screen_gradient"
     tools:context=".main.MainActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -21,9 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="28dp">
+            android:paddingHorizontal="18dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="34dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,25 +38,25 @@
                     android:layout_weight="1"
                     android:text="@string/app_name"
                     android:textColor="@color/text_primary"
-                    android:textSize="28sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/img_setting"
-                    android:layout_width="46dp"
-                    android:layout_height="46dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:background="@drawable/bg_select_circle"
-                    android:padding="10dp"
+                    android:padding="12dp"
                     android:src="@drawable/ic_setting" />
             </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 app:cardBackgroundColor="@color/card_bg"
-                app:cardCornerRadius="28dp"
-                app:cardElevation="2dp"
+                app:cardCornerRadius="34dp"
+                app:cardElevation="6dp"
                 app:strokeColor="@color/border_soft"
                 app:strokeWidth="1dp">
 
@@ -64,45 +64,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="22dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Storage Overview"
+                        android:text="Storage Command Center"
                         android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
+                        android:textSize="12sp" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="210dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="232dp"
+                        android:layout_marginTop="14dp"
                         android:foregroundGravity="center">
 
                         <ImageView
                             android:id="@+id/img_yuan_1"
-                            android:layout_width="210dp"
-                            android:layout_height="210dp"
+                            android:layout_width="224dp"
+                            android:layout_height="224dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_yuan" />
 
                         <ImageView
                             android:id="@+id/img_yuan_2"
-                            android:layout_width="168dp"
-                            android:layout_height="168dp"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_yuan_b" />
 
                         <com.google.android.material.progressindicator.CircularProgressIndicator
                             android:id="@+id/pc"
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="184dp"
+                            android:layout_height="184dp"
                             android:layout_gravity="center"
                             app:indicatorColor="@color/brand_primary"
                             app:indicatorInset="0dp"
-                            app:indicatorSize="170dp"
-                            app:trackColor="#DDE7FF"
-                            app:trackThickness="8dp"
+                            app:indicatorSize="184dp"
+                            app:trackColor="@color/brand_primary_soft"
+                            app:trackThickness="10dp"
                             tools:progress="50" />
 
                         <LinearLayout
@@ -118,7 +118,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 android:textColor="@color/text_primary"
-                                android:textSize="34sp"
+                                android:textSize="38sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -176,7 +176,7 @@
                                     android:layout_marginStart="2dp"
                                     android:text="GB"
                                     android:textColor="@color/text_secondary"
-                                    android:textSize="13sp" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -217,7 +217,7 @@
                                     android:layout_marginStart="2dp"
                                     android:text="GB"
                                     android:textColor="@color/text_secondary"
-                                    android:textSize="13sp" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -228,21 +228,21 @@
                 android:id="@+id/tv_clean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/bg_clean"
                 android:drawableEnd="@drawable/ic_go"
                 android:drawablePadding="6dp"
                 android:gravity="center"
-                android:paddingVertical="18dp"
-                android:text="Start Smart Clean"
+                android:paddingVertical="20dp"
+                android:text="Run One-Tap Boost"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -251,8 +251,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_picture"
+                    android:minHeight="156dp"
                     android:orientation="vertical"
-                    android:padding="18dp">
+                    android:padding="20dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -264,7 +265,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Picture Clean"
-                        android:textColor="#0C4A6E"
+                        android:textColor="@color/brand_accent_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -273,12 +274,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Remove duplicate and blur photos"
-                        android:textColor="#0369A1"
+                        android:textColor="#155E75"
                         android:textSize="12sp" />
                 </LinearLayout>
 
                 <Space
-                    android:layout_width="12dp"
+                    android:layout_width="14dp"
                     android:layout_height="1dp" />
 
                 <LinearLayout
@@ -287,8 +288,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_file"
+                    android:minHeight="156dp"
                     android:orientation="vertical"
-                    android:padding="18dp">
+                    android:padding="20dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -300,7 +302,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="File Clean"
-                        android:textColor="#4338CA"
+                        android:textColor="@color/brand_primary_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -309,7 +311,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Scan large files and downloads"
-                        android:textColor="#6366F1"
+                        android:textColor="@color/brand_primary"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -320,7 +322,7 @@
         android:id="@+id/ll_dialog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#880F172A"
+        android:background="#99312E81"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone">
@@ -328,11 +330,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="36dp"
+            android:layout_marginHorizontal="28dp"
             android:background="@drawable/bg_dialog"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingHorizontal="21dp"
+            android:paddingHorizontal="24dp"
             android:paddingTop="22dp"
             android:paddingBottom="20dp">
 
@@ -363,7 +365,7 @@
                     android:text="Cancel"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp"
-                    app:backgroundTint="#EEF2FF"
+                    app:backgroundTint="@color/brand_primary_soft"
                     app:cornerRadius="18dp" />
 
                 <com.google.android.material.button.MaterialButton
