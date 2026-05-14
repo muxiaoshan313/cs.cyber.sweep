@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".McApp"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileClean">
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CleanActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PicCleanActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FileScanActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NetActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".extras.NebulaQ7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.MossKite42Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.PixelDrift93Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.QuartzNoodle5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.VelvetRaccoon8Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.NimbusFlip21Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.CactusOrbit66Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.LemonForge17Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.EchoPanda54Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.TurboMint30Activity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.AmberFalconActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.VelvetAnchorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.CloudHarborActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.MapleCometActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.SonicWillowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.QuartzLadderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.FrozenTulipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.CopperMeadowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.LunarPebbleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.WhisperDandelionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.NovaCanyonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.DriftLanternActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.EchoMantisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.PlasmaRavenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.HollowSpruceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.SableOrbitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.CinderVoyageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.IndigoFableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.MistyHarpoonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".extras.RapidThornActivity"
+            android:exported="false" />
+
+
+        <service
+            android:name=".firebase.KeepAliveFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

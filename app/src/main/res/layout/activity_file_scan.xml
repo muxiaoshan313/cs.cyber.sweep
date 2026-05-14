@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/file"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF7FF">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"/>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large File Clean"
+        android:textColor="#FF0A100F"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_back" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_back">
+
+        <LinearLayout
+            android:id="@+id/ll_types"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_types"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All types"
+                android:textColor="#FFA3A3A3"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_san" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Size"
+                android:textColor="#FFA3A3A3"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_san" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Time"
+                android:textColor="#FFA3A3A3"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_san" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_files"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom_control" />
+
+    <ImageView
+        android:id="@+id/iv_no_data"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_no_data"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom_control"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No file yet."
+        android:textColor="#FFA3A3A3"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/iv_no_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tv_delete">
+
+        <ImageView
+            android:id="@+id/iv_select_all"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_dis_selete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Select All"
+            android:textColor="#FF0A100F"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_selected_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 selected"
+            android:textColor="#FFA3A3A3"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_delete"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="38dp"
+        android:paddingVertical="14dp"
+        android:text="Delete"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/view_dropdown_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_dropdown_types"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dropdown"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView android:id="@+id/tv_all_type" android:layout_width="match_parent" android:layout_height="40dp" android:text="All Type" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_image" android:layout_width="match_parent" android:layout_height="40dp" android:text="Image" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_video" android:layout_width="match_parent" android:layout_height="40dp" android:text="Video" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_audio" android:layout_width="match_parent" android:layout_height="40dp" android:text="Audio" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_docs" android:layout_width="match_parent" android:layout_height="40dp" android:text="Docs" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_download" android:layout_width="match_parent" android:layout_height="40dp" android:text="Download" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+        <TextView android:id="@+id/tv_zip" android:layout_width="match_parent" android:layout_height="40dp" android:text="Zip" android:gravity="center" android:textSize="12sp" android:textColor="#FF0A100F" android:background="?android:attr/selectableItemBackground" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dropdown_size"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dropdown"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/tv_all_size"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="All Size"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_10mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">10MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_20mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">20MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_50mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">50MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_100mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">100MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_200mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">200MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_500mb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=">500MB"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dropdown_time"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dropdown"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/tv_all_time"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="All Time"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_1day"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Within 1 day"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_1week"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Within 1 week"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_1month"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Within 1 month"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_3month"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Within 3 month"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_6month"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Within 6 month"
+            android:textColor="#FF0A100F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <include
+        android:id="@+id/in_clean"
+        layout="@layout/layout_clean"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33978894724",
+    "project_id": "cybersweep-e4653",
+    "storage_bucket": "cybersweep-e4653.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33978894724:android:9c38d9ff35bee47da1b5d1",
+        "android_client_info": {
+          "package_name": "cs.cyber.sweep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCswTYVqMyMKHgb97ixeBEQTzjQK5wBrNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
